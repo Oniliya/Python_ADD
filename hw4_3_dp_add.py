@@ -6,13 +6,18 @@
 def main():
     number=int(input("Введите количество элеметнов последовательности = "),)
     f0, f1 =0, 1
+    f_1=1
+    f_2=-1
     res=""
-    res=str(f0)+" "+str(f1)
+    res=str(f_2)+" "+str(f_1)+" "+str(f0)+" "+str(f1)
     
     for i in range(number-1):
         res=res+" "+str(f0+f1)
         f0, f1 = f1, f0+f1
-        res=str(((-1)**(i+1))*f1) + " " + res
+        res=str(f_1-f_2)+" "+res
+        f_1, f_2 = f_2, f_1-f_2 
+        
+        # res=str(((-1)**(i+1))*f1) + " " + res
 
     print(res)
 

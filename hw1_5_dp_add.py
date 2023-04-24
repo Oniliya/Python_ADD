@@ -72,20 +72,20 @@ def decode_rus_str(my_str :str) -> list:
 def main():
     
     shift=int(input("Введите сдвиг для кода Цезаря -> "))
-    phraze_to_code=input("Введите строку для шифрования - > ")
+    phrase_to_code=input("Введите строку для шифрования - > ")
 
-    str_to_check=phraze_to_code
-    str_to_check = ''.join(c for c in phraze_to_code if c not in string.punctuation)
+    str_to_check=phrase_to_code
+    str_to_check = ''.join(c for c in phrase_to_code if c not in string.punctuation)
 
-    print(code_eng(phraze_to_code, shift) if check_eng_lang(str_to_check) else code_rus(phraze_to_code, shift))
+    print(code_eng(phrase_to_code, shift) if check_eng_lang(str_to_check) else code_rus(phrase_to_code, shift))
 
 
 
-    phraze_to_decode=input("Введите строку для дешифрования - > ")
+    phrase_to_decode=input("Введите строку для дешифрования - > ")
     
-    str_to_check_decode=phraze_to_decode
-    str_to_check_decode = ''.join(c for c in phraze_to_code if c not in string.punctuation)
+    str_to_check_decode=phrase_to_decode
+    str_to_check_decode = ''.join(c for c in phrase_to_decode if c not in string.punctuation)
 
-    print(decode_eng_str(phraze_to_decode) if check_eng_lang(str_to_check_decode) else decode_rus_str(phraze_to_decode))
+    print(decode_eng_str(phrase_to_decode) if check_eng_lang(str_to_check_decode) else decode_rus_str(phrase_to_decode))
 
 main()
